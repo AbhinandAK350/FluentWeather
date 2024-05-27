@@ -29,6 +29,7 @@ using FluentWeather.Utils;
 using FluentWeather.Dialogs;
 using FluentWeather.Core.Helpers;
 using CommunityToolkit.WinUI.Controls;
+using Windows.System;
 
 namespace FluentWeather.Views
 {
@@ -48,7 +49,6 @@ namespace FluentWeather.Views
         {
             BaseAddress = new Uri("https://api.weather.com/"),
         };
-
 
         private readonly string _systemLanguage = Windows.System.UserProfile.GlobalizationPreferences.Languages[0];
 
@@ -106,24 +106,18 @@ namespace FluentWeather.Views
         public MainPage()
         {
             //use the EntranceNavigationTransition when showing the page at startup (pageload)
-            this.Transitions = new TransitionCollection
+            Transitions = new TransitionCollection
             {
                 new EntranceThemeTransition()
             };
 
             InitializeComponent();
 
-            this.DataContext = this; //DataContext = ViewModel;
+            DataContext = this; //DataContext = ViewModel;
             Initialize();
-
-            InitializeStoryboards();
-
-            _appViewModel.UpdateUIAction += () => { Task.Run(LoadApiData); };
-
-            Task.Run(LoadApiData);
         }
 
-        private async void Initialize()
+        private void Initialize()
         {
             // Hide default title bar.
             var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
@@ -143,6 +137,13 @@ namespace FluentWeather.Views
             //NavigationService.Navigate(typeof(Views.DashWet));
 
             AppVersionText = GetVersionDescription();
+
+            InitializeStoryboards();
+
+            _appViewModel.UpdateUIAction += async () => { await Task.Run(LoadApiData); };
+            KeyDown += MainPage_KeyDown;
+
+            _appViewModel.UpdateUi();
         }
 
         private string GetVersionDescription()
@@ -215,8 +216,7 @@ namespace FluentWeather.Views
             //save location to settings
             await ApplicationData.Current.LocalSettings.SaveAsync("lastPlaceId", selectedPlaceId);
 
-
-            await Task.Run(LoadApiData);
+            _appViewModel.UpdateUi();
         }
 
 
@@ -262,7 +262,6 @@ namespace FluentWeather.Views
                 );
             }
 
-
             await CoreApplication.MainView.Dispatcher.RunAsync(
                 CoreDispatcherPriority.Normal, () => {
                     RefreshButton.Visibility = Visibility.Visible;
@@ -270,7 +269,6 @@ namespace FluentWeather.Views
                 }
             );
         }
-
 
         /// <summary>
         /// storyboards code
@@ -316,7 +314,6 @@ namespace FluentWeather.Views
             };
         }
 
-
         private void InitializeStoryboards()
         {
             _storyboard1 = CreateCrossfadeStoryboard(Image1, Image2);
@@ -353,7 +350,6 @@ namespace FluentWeather.Views
 
             return storyboard;
         }
-
 
         private async void UpdateUi(RootV3Response rootV3Response)
         {
@@ -436,7 +432,6 @@ namespace FluentWeather.Views
                 i++;
             }
 
-
             RepeaterDays.ItemsSource = dayButtonAdapters;
 
             //select first day button
@@ -450,7 +445,6 @@ namespace FluentWeather.Views
             WetUnits currentUnits = await VariousUtils.GetUnitsCode();
 
             int i = 0;
-
 
             var firstDate = _lastApiData.v3wxforecasthourly10day.validTimeLocal[0];
 
@@ -488,7 +482,6 @@ namespace FluentWeather.Views
 
             HourlyListview.ItemsSource = hourlyDataAdapters;
         }
-
 
         private async void LoadInsightsData(DateTimeOffset dayToLoad)
         {
@@ -590,7 +583,6 @@ namespace FluentWeather.Views
             LunarphaseIcon.Source = svgImageSource;
         }
 
-
         private void DayButtonClick(object sender, RoutedEventArgs e)
         {
             var button = (Button) sender;
@@ -632,20 +624,22 @@ namespace FluentWeather.Views
             ip?.Invoke();
         }
 
-
         private void RefreshButton_OnClick(object sender, RoutedEventArgs e)
         {
-            Task.Run(LoadApiData);
+            _appViewModel.UpdateUi();
         }
 
         private async void UnitsSegmented_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var segmented = (Segmented) sender;
 
+            if (!segmented.IsLoaded)
+                return;
+
             //save selected index to local settings
             await ApplicationData.Current.LocalSettings.SaveAsync("selectedUnits", segmented.SelectedIndex);
 
-            await Task.Run(LoadApiData);
+            _appViewModel.UpdateUi();
         }
 
         private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
@@ -674,17 +668,32 @@ namespace FluentWeather.Views
 
         private void RefContainer_RefreshRequested(RefreshContainer sender, RefreshRequestedEventArgs args)
         {
-            Task.Run(LoadApiData);
+            _appViewModel.UpdateUi();
         }
 
         private async void TimeFormatSegmented_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var segmented = (Segmented) sender;
 
+            if (!segmented.IsLoaded)
+                return;
+
             //save selected index to local settings
             await ApplicationData.Current.LocalSettings.SaveAsync("is12HourFormat", segmented.SelectedIndex == 1);
 
-            await Task.Run(LoadApiData);
+            _appViewModel.UpdateUi();
+        }
+
+        private void MainPage_KeyDown(object sender, KeyRoutedEventArgs args)
+        {
+            switch (args.Key)
+            {
+                case VirtualKey.F5:
+
+                    _appViewModel.UpdateUi();
+
+                    break;
+            }
         }
     }
 }

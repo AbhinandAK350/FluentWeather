@@ -152,7 +152,7 @@
     <value>Відчувається як</value>
   </data>
   <data name="RunningInsightTitle" xml:space="preserve">
-    <value>Біжить</value>
+    <value>Біг</value>
   </data>
   <data name="DrivingInsightTitle" xml:space="preserve">
     <value>У машині</value>
@@ -179,7 +179,7 @@
     <value>Точка роси</value>
   </data>
   <data name="UVIndexChipControl.Title" xml:space="preserve">
-    <value>Індекс UV</value>
+    <value>УФ-індекс</value>
   </data>
   <data name="DailyForecastTitleTextBlock.Text" xml:space="preserve">
     <value>Щоденний прогноз</value>
@@ -280,9 +280,9 @@
     <value>Переглянути всі зміни</value>
   </data>
   <data name="Segmented24hours.Content" xml:space="preserve">
-    <value>24 hours</value>
+    <value>24 години</value>
   </data>
   <data name="Segmented12hours.Content" xml:space="preserve">
-    <value>12 hours</value>
+    <value>12 годин</value>
   </data>
 </root>

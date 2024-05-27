@@ -1,19 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-using Windows.Foundation;
-using Windows.Storage;
+﻿using System.Collections.Generic;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using FluentWeather.Models;
-using Windows.UI.Xaml.Media.Imaging;
 using FluentWeather.Core.Helpers;
 using FluentWeather.Services;
-using Path = Windows.UI.Xaml.Shapes.Path;
 using Windows.UI.Xaml.Markup;
 
 namespace FluentWeather.Controls
@@ -33,9 +24,9 @@ namespace FluentWeather.Controls
                 nameof(Insight),
                 typeof(Insight),
                 typeof(InsightControl),
-                new PropertyMetadata(null, new PropertyChangedCallback(OnTitleChanged)));
+                new PropertyMetadata(null, OnTitleChanged));
 
-        private static async void OnTitleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void OnTitleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var currentInstance = (InsightControl) d;
 
@@ -60,8 +51,6 @@ namespace FluentWeather.Controls
         {
             var finalLevel = InsightLevel.None;
 
-            SolidColorBrush brush = new SolidColorBrush();
-
             if (levels.ContainsKey(level))
             {
                 finalLevel = levels[level];
@@ -84,7 +73,7 @@ namespace FluentWeather.Controls
 
         public InsightControl()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
     }
 }

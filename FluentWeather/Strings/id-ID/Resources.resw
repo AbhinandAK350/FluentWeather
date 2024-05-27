@@ -118,15 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppDisplayName" xml:space="preserve">
-    <value>TempoFluente</value>
+    <value>FluentWeather</value>
     <comment>Application display name</comment>
   </data>
   <data name="AppDescription" xml:space="preserve">
-    <value>TempoFluente</value>
+    <value>FluentWeather</value>
     <comment>Application description</comment>
   </data>
   <data name="WhatsNewDialog.Title" xml:space="preserve">
-    <value>Novidades nesta versão</value>
+    <value>Yang baru di versi ini</value>
     <comment>What's new prompt message title</comment>
   </data>
   <data name="WhatsNewDialog.PrimaryButtonText" xml:space="preserve">
@@ -134,155 +134,155 @@
     <comment>What's new prompt message primary button text</comment>
   </data>
   <data name="FirstRun_Body.Text" xml:space="preserve">
-    <value>Pesquise e selecione a sua localização abaixo:</value>
+    <value>Cari lokasi Anda:</value>
     <comment>First use prompt message body</comment>
   </data>
   <data name="FirstRunDialog.Title" xml:space="preserve">
-    <value>Bem-vindo ao TempoFluente!</value>
+    <value>Selamat datang di FluentWeather!</value>
     <comment>First use prompt message title</comment>
   </data>
   <data name="FirstRunDialog.PrimaryButtonText" xml:space="preserve">
-    <value>Vamos lá!</value>
+    <value>Lanjutkan</value>
     <comment>First use prompt message primary button text</comment>
   </data>
   <data name="SearchAutoSuggestBox.PlaceholderText" xml:space="preserve">
-    <value>Procurar um lugar…</value>
+    <value>Cari lokasi...</value>
   </data>
   <data name="FeelsLikeText" xml:space="preserve">
-    <value>Parece que</value>
+    <value>Terasa seperti</value>
   </data>
   <data name="RunningInsightTitle" xml:space="preserve">
-    <value>Correndo</value>
+    <value>Berlari</value>
   </data>
   <data name="DrivingInsightTitle" xml:space="preserve">
-    <value>Condução</value>
+    <value>Mengemudi</value>
   </data>
   <data name="DrySkinInsightTitle" xml:space="preserve">
-    <value>Pele seca</value>
+    <value>Kulit kering</value>
   </data>
   <data name="WateringNeedInsightTitle" xml:space="preserve">
-    <value>Necessidade de rega</value>
+    <value>Minum</value>
   </data>
   <data name="WindChipControl.Title" xml:space="preserve">
-    <value>Vento</value>
+    <value>Angin</value>
   </data>
   <data name="PressureChipControl.Title" xml:space="preserve">
-    <value>Pressão atmosférica</value>
+    <value>Tekanan</value>
   </data>
   <data name="HumidityChipControl.Title" xml:space="preserve">
-    <value>Humidade</value>
+    <value>Kelembapan</value>
   </data>
   <data name="VisibilityChipControl.Title" xml:space="preserve">
-    <value>Visibilidade</value>
+    <value>Keterlihatan</value>
   </data>
   <data name="DewPointChipControl.Title" xml:space="preserve">
-    <value>Ponto de orvalho</value>
+    <value>Titik Embun</value>
   </data>
   <data name="UVIndexChipControl.Title" xml:space="preserve">
-    <value>Índice Ultravioleta</value>
+    <value>Indeks UV</value>
   </data>
   <data name="DailyForecastTitleTextBlock.Text" xml:space="preserve">
-    <value>Previsão diária</value>
+    <value>Prakiraan harian</value>
   </data>
   <data name="HourlyTitleText.Text" xml:space="preserve">
-    <value>Por hora</value>
+    <value>Per jam</value>
   </data>
   <data name="WeatherInsightsTitleText.Text" xml:space="preserve">
-    <value>Perceções meteorológicas</value>
+    <value>Sepintas cuaca</value>
   </data>
   <data name="DaySummaryInsightTitle.Text" xml:space="preserve">
-    <value>Resumo do dia</value>
+    <value>Ringkasan Hari</value>
   </data>
   <data name="DaySummaryInsightSubtitle.Text" xml:space="preserve">
-    <value>Dia</value>
+    <value>Siang</value>
   </data>
   <data name="NightSummaryInsightSubtitle.Text" xml:space="preserve">
-    <value>Noite</value>
+    <value>Malam</value>
   </data>
   <data name="SunInsightTitle.Text" xml:space="preserve">
-    <value>Sol</value>
+    <value>Matahari</value>
   </data>
   <data name="SunsetSubtitle.Text" xml:space="preserve">
-    <value>Pôr do sol</value>
+    <value>Terbenam</value>
   </data>
   <data name="SunriseSubtitle.Text" xml:space="preserve">
-    <value>Nascer do sol</value>
+    <value>Terbit</value>
   </data>
   <data name="MoonInsightTitle.Text" xml:space="preserve">
-    <value>Lua</value>
+    <value>Bulan</value>
   </data>
   <data name="MoonriseSubtitle.Text" xml:space="preserve">
-    <value>Nascer da lua</value>
+    <value>Terbit</value>
   </data>
   <data name="MoonsetSubtitle.Text" xml:space="preserve">
-    <value>Pôr da lua</value>
+    <value>Terbenam</value>
   </data>
   <data name="LunarphaseSubtitle.Text" xml:space="preserve">
-    <value>Fase lunar</value>
+    <value>Fase bulan</value>
   </data>
   <data name="UnitsSettingsTitle.Text" xml:space="preserve">
-    <value>Unidades</value>
+    <value>Satuan</value>
   </data>
   <data name="AcrylicEffectsSettingsTitle.Text" xml:space="preserve">
-    <value>Efeitos acrílicos</value>
+    <value>Efek Acrylic</value>
   </data>
   <data name="CreditsSettingsTitle.Text" xml:space="preserve">
-    <value>Créditos</value>
+    <value>Penghargaan</value>
   </data>
   <data name="GithubProjectButton.Text" xml:space="preserve">
-    <value>Projeto no GitHub</value>
+    <value>Proyek GitHub</value>
   </data>
   <data name="MetricUnitsItem.Content" xml:space="preserve">
-    <value>Métrico</value>
+    <value>Metrik</value>
   </data>
   <data name="ImperialUnitsItem.Content" xml:space="preserve">
-    <value>Imperial</value>
+    <value>Imperial AS</value>
   </data>
   <data name="HybridUnitsItem.Content" xml:space="preserve">
-    <value>Híbrido</value>
+    <value>Campuran</value>
   </data>
   <data name="InspiredByRun.Text" xml:space="preserve">
-    <value>Desenho da IU inspirado pela obra de</value>
+    <value>Rancangan antarmuka terinspirasi oleh</value>
   </data>
   <data name="DevelopedByRun.Text" xml:space="preserve">
-    <value>desenvolvido por</value>
+    <value>dikembangkan oleh</value>
   </data>
   <data name="TranslateAppText.Text" xml:space="preserve">
-    <value>Traduza esta aplicação</value>
+    <value>Terjemahkan aplikasi ini</value>
   </data>
   <data name="UpdatedOnText" xml:space="preserve">
-    <value>Atualizado em </value>
+    <value>Diperbarui pada </value>
   </data>
   <data name="WeatherLiveTileSettingsText.Text" xml:space="preserve">
-    <value>Tempo AzulejoVivo</value>
+    <value>Ubin Langsung Cuaca</value>
   </data>
   <data name="LiveTileInfoIcon.ToolTipService.ToolTip" xml:space="preserve">
-    <value>Primeiro, tem de fixar o TempoFluente na ementa Iniciar.
+    <value>Anda harus menyematkan FluentWeather ke Menu Mulai.
 
-Os Azulejos Vivos estão disponíveis apenas no Windows 10.</value>
+Ubin Langsung hanya tersedia di Windows 10.</value>
   </data>
   <data name="NextHours" xml:space="preserve">
-    <value>Próximas horas:</value>
+    <value>Jam-jam berikutnya:</value>
   </data>
   <data name="TimeFormatSettingsTitle.Text" xml:space="preserve">
-    <value>Formato da hora</value>
+    <value>Format waktu</value>
   </data>
   <data name="CloudCoverChipControl.Title" xml:space="preserve">
-    <value>Cobertura de nuvens</value>
+    <value>Tutupan awan</value>
   </data>
   <data name="RainAmountChipControl.Title" xml:space="preserve">
-    <value>Quantidade de chuva</value>
+    <value>Curah hujan</value>
   </data>
   <data name="HourlyDetailedDataTitle.Text" xml:space="preserve">
-    <value>Dados pormenorizados</value>
+    <value>Data rinci</value>
   </data>
   <data name="ViewAllChanges.Text" xml:space="preserve">
-    <value>Ver todas as alterações</value>
+    <value>Lihat semua perubahan</value>
   </data>
   <data name="Segmented24hours.Content" xml:space="preserve">
-    <value>24 horas</value>
+    <value>24 jam</value>
   </data>
   <data name="Segmented12hours.Content" xml:space="preserve">
-    <value>12 horas</value>
+    <value>12 jam</value>
   </data>
 </root>
